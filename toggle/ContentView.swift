@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var toggle = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        Toggle(isOn: $toggle, label: {
+            
+//            Custom label
+            Text("Status = \(toggle ? "True" : "False")")
+        })
     }
 }
 
